@@ -13,12 +13,12 @@ time.sleep(0.5)
 v.ChangeDutyCycle(0)
 vt = 5
 
+#introduction message
 print
 print("This is the interactive ServoCam-Control-Programm.")
 print("If you need help, just ask for it!")
 print
 
-#platform system process
 def help():
 	print
 	print("Commands:")
@@ -100,9 +100,9 @@ while command != "exit":
 		command = raw_input("?")
 
 
-
+v.ChangeDutyCycle(5)
+time.sleep(1)
 v.stop()
-h.stop()
 
 GPIO.cleanup()
 print("[Done]")
